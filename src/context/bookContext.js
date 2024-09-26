@@ -34,10 +34,6 @@ const BookProvider = ({children}) => {
         setToken(storedToken);
         setLoading(false); 
 
-        
-        const theme = localStorage.getItem('theme', darkMode)
-        setDarkMode(theme)
-
         setSelectedBook({
             path , 
             author ,
@@ -52,6 +48,12 @@ const BookProvider = ({children}) => {
         fetchData()
         
     },[fetchData])
+
+    // Fetch theme data separately
+    useEffect(() => {
+        const theme = localStorage.getItem('theme');
+        setDarkMode(theme === 'true');
+    }, []);
 
     const themeToggle = () => {
         setDarkMode(!darkMode)

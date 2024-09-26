@@ -134,8 +134,7 @@ const EpubViewer = () => {
         window.removeEventListener('keydown', handleKeyDown);
         };
     }, [rendition]);
-    
-    console.log(selectedBook);
+
     
 
     return (
