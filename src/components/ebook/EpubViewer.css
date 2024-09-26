@@ -1,0 +1,65 @@
+.container-fluid {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.viewer-container {
+    border: 1px solid #ccc;
+    position: relative;
+    height: 96%;
+    width: 100%;
+    flex: 1;
+}
+
+.viewer-header{
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.divider {
+    display: flex;
+    gap: 1rem;
+}
+
+.table-of-content {
+    width: 250px;
+    height: 96%;
+    font-size: 12px;
+    word-break: break-all;
+    margin-bottom: 5px;
+    position: absolute;
+    background-color: #f8f8f8;
+    border: 1px solid #d9d9d9;
+    overflow-y: scroll;
+    z-index: 1000; /* Ensure TOC is above the viewer */
+    transition: transform 0.3s ease;
+}
+
+.table-of-content.hidden {
+    transform: translateX(-100%); /* Hide TOC off-screen */
+}
+
+.table-of-content ul li {
+    padding-top: 5px;
+    padding-bottom: 0;
+    border-right: 1px solid #ccc;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+.table-of-content ul li:hover {
+    background-color: azure;
+    cursor: pointer;
+}
+
+.table-of-content .list-group-item.active {
+    background-color: #007bff; /* Highlight color */
+    color: white;              /* Text color */
+    font-weight: bold;          /* Bold text */
+}
