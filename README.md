@@ -4,7 +4,7 @@ An interactive EPUB reader built with the MERN stack. It allows users to upload,
 
 ## Features
 
-- **Upload and Read ePub Files**: Users can upload their ePub books and read them directly in the browser.
+- **Upload and Read ePub Files**: Users can upload their ePub books and read them directly in the browser(chrome).
 - **Interactive Reading Interface**: Navigate between chapters, pages, and bookmarks with ease.
 - **Customization**: Adjust switch between light and dark themes, and control line spacing for a personalized reading experience.
 
@@ -36,7 +36,7 @@ An interactive EPUB reader built with the MERN stack. It allows users to upload,
 1. Clone the repository and navigate to the `client` folder:
 
 ```
-git clone https://github.com/your-username/ebook-reader.git	
+git clone https://github.com/manoje8/ebook-reader.git
 cd ebook-reader
 ```
 
