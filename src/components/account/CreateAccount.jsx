@@ -46,7 +46,6 @@ const CreateAccount = () => {
                     autoClose: 3000,
                 })
             }
-            setLoading(false)
             navigate("/auth/login")
         } catch (error) 
         {
@@ -59,6 +58,10 @@ const CreateAccount = () => {
                     hideProgressBar: true
                 })
             }
+        }
+        finally
+        {
+            setLoading(false)
         }
     }
 

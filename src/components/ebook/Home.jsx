@@ -25,7 +25,7 @@ const Home = () => {
                 response.data.map(async (data) => {
                     let replaceSlashOfPath = data.path.replace(/\\/g, "/");
                     const eBookPath = `${process.env.REACT_APP_API_URL}/${replaceSlashOfPath}`
-                    
+                    await axios.head(eBookPath);
                     const eBookMeta = ePub(eBookPath);
         
                     // Fetch book metadata
@@ -75,7 +75,7 @@ const Home = () => {
         } 
         catch (error) 
         {
-            toast.success(error.message, {
+            toast.error(error.message, {
                 position: "bottom-center",
                 autoClose: 3000,
             })

@@ -36,7 +36,6 @@ const ForgotPassword = () => {
                     autoClose: 3000,
                 })
             }
-            setLoading(false)
             navigate("/auth/login")
         } catch (error) 
         {
@@ -49,6 +48,10 @@ const ForgotPassword = () => {
                     hideProgressBar: true
                 })
             }
+        }
+        finally
+        {
+            setLoading(false)
         }
     }
 
